@@ -26,12 +26,12 @@ const ChefDetails = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={chef.view_image} className="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 className="text-5xl font-bold">Name: {chef.chef_name}</h1>
-                        <h2 className="text-2xl">Years of Experience: {chef.years_of_experience}</h2>
-                        <h3>Number of Recipes: {chef.num_recipes}</h3>
+                    <div className="w-50 ml-20">
+                        <h1 className="text-7xl font-bold font-mono">Name: {chef.chef_name}</h1>
+                        <h2 className="text-5xl font-bold">Years of Experience: {chef.years_of_experience}</h2>
+                        <h3 className="text-3xl font-bold">Number of Recipes: {chef.num_recipes}</h3>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <button className="btn btn-warning">Lets Talk</button>
                     </div>
                 </div>
             </div>

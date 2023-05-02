@@ -5,11 +5,11 @@ const Header = () => {
     return (
         <div>
             <div className="navbar bg-black pt-5 text-white">
-                <div className="flex-1 ml-10">
-                    <img className='w-[300px]' src={logo} alt='logo' />
+                <div className="md:flex-1 ml-10">
+                    <img className='md:w-[350px] sm:w-[200px]' src={logo} alt='logo' />
                 </div>
                 <div className="flex-none gap-2 mr-5">
-                    <div className="flex justify-center">
+                    <div className="md:flex justify-center">
                         <ul className="menu menu-horizontal px-1">
                             <li><Link to='/'>Home</Link></li>
                             <li><a>About</a></li>
@@ -19,7 +19,7 @@ const Header = () => {
                     </div>
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0}>
-                            <div className="navbar-end">
+                            <div className="md:navbar-end">
                                 <button to='/login' className="btn btn-warning">Login</button>
                             </div>
                         </label>

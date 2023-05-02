@@ -20,7 +20,7 @@ const Chefs = () => {
 
     return (
         <div>
-            <h2 className="text-5xl font-bold text-center mt-10">Our Best Chef</h2>
+            <h2 className="md:text-5xl sm:text-3xl font-bold text-center mt-10">Our Best Chef</h2>
             <div className="flex flex-wrap justify-center">
                 {chefs.map((chef) => (
                     <div
@@ -29,7 +29,7 @@ const Chefs = () => {
                     >
                         <img className="w-[200px] ml-5" src={chef.view_image} alt="chef" />
                         <div className="card-body text-left">
-                            <h2 className="card-title">{chef.chef_name}</h2>
+                            <h2 className="card-title font-bold">{chef.chef_name}</h2>
                             <p>Years of Experience: {chef.years_of_experience}</p>
                             <p>Number of Recipes: {chef.num_recipes}</p>
                             <HiOutlineHeart /> {chef.likes}

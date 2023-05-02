@@ -10,7 +10,7 @@ const Home = () => {
                 <div className="hero-overlay bg-opacity-50"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-extrabold">Best Chef Recipe</h1>
+                        <h1 className="mb-5 md:text-5xl sm:text-3xl font-extrabold">Best Chef Recipe</h1>
                         <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <button className="btn btn-warning">Let Meet Our Chef&apos;s</button>
                     </div>
