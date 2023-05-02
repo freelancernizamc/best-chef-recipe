@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../../Header/Header";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 
 const Register = () => {
@@ -52,6 +53,9 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-warning">Register</button>
                         </div>
+                        <h2 className="text-center">OR</h2>
+                        <hr />
+                        <div className="flex ml-5 text-2xl">   <FaGoogle /> &emsp; <FaGithub /></div>
                     </div>
                 </div>
             </div>

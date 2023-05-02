@@ -2,10 +2,25 @@
 
 import { Link } from "react-router-dom";
 import Header from "../../Header/Header";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
+import app from "../../../firebase/firebase.config";
 
 
 const Login = () => {
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
 
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
+    }
 
     return (
         <div className='w-50 mx-auto'>
@@ -35,8 +50,11 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-warning">Login</button>
                     </div>
+                    <h2 className="text-center">OR</h2>
+                    <hr />
+                    <div className="flex ml-5 text-2xl cursor-pointer">   <FaGoogle onClick={handleGoogleSignIn} /> &emsp; <FaGithub /></div>
                 </div>
                 </div>
             </div>
