@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import { useParams } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const ChefDetails = () => {
     const { id } = useParams();
@@ -47,6 +48,7 @@ const ChefDetails = () => {
                     </div>
                 ))}
             </div>
+            <Footer />
 
         </div>
     );
