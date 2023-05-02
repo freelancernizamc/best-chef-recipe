@@ -1,5 +1,7 @@
 // import React from 'react';
 
+import Chefs from "../Chefs/Chefs";
+
 import Header from "../Header/Header";
 
 const Home = () => {
@@ -16,6 +18,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Chefs />
         </div>
     );
 };
