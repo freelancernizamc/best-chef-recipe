@@ -20,7 +20,7 @@ const Header = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0}>
                             <div className="md:navbar-end">
-                                <button to='/login' className="btn btn-warning">Login</button>
+                                <button className='btn btn-warning'><Link to='/login'>Login</Link></button>
                             </div>
                         </label>
 
