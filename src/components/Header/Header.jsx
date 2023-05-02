@@ -6,15 +6,15 @@ const Header = () => {
         <div>
             <div className="navbar bg-black pt-5 text-white">
                 <div className="md:flex-1 ml-10">
-                    <img className='md:w-[350px] sm:w-[200px]' src={logo} alt='logo' />
+                    <img className='md:w-[300px] sm:w-[200px]' src={logo} alt='logo' />
                 </div>
                 <div className="flex-none gap-2 mr-5">
-                    <div className="md:flex justify-center">
-                        <ul className="menu menu-horizontal px-1">
+                    <div className="md:flex justify-center items-center">
+                        <ul className="menu menu-horizontal px-5">
                             <li><Link to='/'>Home</Link></li>
-                            <li><a>About</a></li>
-                            <li><a>Blog</a></li>
-                            <li><a>Contact</a></li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/blog'>Blog</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
                     <div className="dropdown dropdown-end">

@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import ChefDetails from './components/chefDetails/chefDetails'
 import Main from './layouts/Main'
+import Blog from './components/Blog/Blog'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: `/chefs/:id`,
     element: <ChefDetails />
+  },
+  {
+    path: '/blog',
+    element: <Blog />
   }
 ]);
 
