@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../../public/images/logo.png'
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
                 <div className="flex-none gap-2 mr-5">
                     <div className="flex justify-center">
                         <ul className="menu menu-horizontal px-1">
-                            <li><a>Home</a></li>
+                            <li><Link to='/'>Home</Link></li>
                             <li><a>About</a></li>
                             <li><a>Blog</a></li>
                             <li><a>Contact</a></li>

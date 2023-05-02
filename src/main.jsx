@@ -1,19 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import './index.css'
-// import Main from './layouts/Main.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './components/Home/Home';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import ChefDetails from './components/chefDetails/chefDetails'
+import Main from './layouts/Main'
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home></Home>
+    path: '/',
+    element: <Main />
   },
+  {
+    path: `/chefs/:id`,
+    element: <ChefDetails />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
