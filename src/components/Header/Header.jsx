@@ -1,24 +1,20 @@
 import { Link } from 'react-router-dom';
-import logo from '../../../public/images/logo.png'
-// import { getAuth, signOut } from 'firebase/auth';
-// import app from '../../firebase/firebase.config';
-// import { useState } from 'react';
+import logo from '../../../public/images/logo.png';
+import { useContext } from 'react';
+import { AuthContext } from '../providers/AuthProvider';
 
 
-// const handleSignOut = () => {
-//     const auth = getAuth(app);
-//     const { user, setUser } = useState(user);
-//     signOut(auth)
-//         .then(result => {
-//             console.log(result)
-//             setUser(null);
-//         })
-//         .catch(error => {
-//             console.log(error)
-//         })
-// }
+
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+    console.log(user)
+    const handleLogout = () => {
+        logOut();
+
+
+    }
+
     return (
         <div>
             <div className="navbar bg-black pt-5 text-white">
@@ -38,7 +34,11 @@ const Header = () => {
                         <label tabIndex={0}>
                             <div className="md:navbar-end">
 
-                                <button className='btn btn-warning'><Link to='/login'>Login</Link></button>
+                                {user ?
+                                    <button className='btn btn-warning'><Link onClick={handleLogout}>LogOut</Link></button> :
+                                    <button className='btn btn-warning'><Link to='/login'>Login</Link></button>
+                                }
+
 
                             </div>
                         </label>

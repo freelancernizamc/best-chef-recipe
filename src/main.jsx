@@ -11,6 +11,7 @@ import Blog from './components/Blog/Blog'
 import Login from './components/Login/Login/Login'
 import Register from './components/Login/Register/Register'
 import Home from './components/Home/Home';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',

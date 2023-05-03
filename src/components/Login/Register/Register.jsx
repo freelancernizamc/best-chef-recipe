@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Header from "../../Header/Header";
+
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../firebase/firebase.config";
@@ -82,7 +82,7 @@ const Register = () => {
 
     return (
         <div className='w-50 mx-auto'>
-
+            {user ? <h2>{user.name}</h2> : ""}
 
             <h1 className="text-5xl font-bold text-center mt-10">Register Now!</h1>
 
