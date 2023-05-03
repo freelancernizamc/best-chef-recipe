@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
                         <div>
                             <p className="font-medium tracking-wide text-gray-300">
-                                Category
+                                Recipe
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
@@ -17,7 +17,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        News
+                                        Breakfast
                                     </a>
                                 </li>
                                 <li>
@@ -25,7 +25,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        World
+                                        Dinner
                                     </a>
                                 </li>
                                 <li>
@@ -33,7 +33,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Games
+                                        Lunch
                                     </a>
                                 </li>
                                 <li>
@@ -41,20 +41,20 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        References
+                                        Snacks
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <p className="font-medium tracking-wide text-gray-300">Apples</p>
+                            <p className="font-medium tracking-wide text-gray-300">Chefs</p>
                             <ul className="mt-2 space-y-2">
                                 <li>
                                     <a
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Web
+                                        Maria Sanchez
                                     </a>
                                 </li>
                                 <li>
@@ -62,7 +62,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        eCommerce
+                                        John Smith
                                     </a>
                                 </li>
                                 <li>
@@ -70,7 +70,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Business
+                                        Samantha Lee
                                     </a>
                                 </li>
                                 <li>
@@ -78,7 +78,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Entertainment
+                                        Anna Nguyen
                                     </a>
                                 </li>
                                 <li>
@@ -86,7 +86,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Portfolio
+                                        Carlos Rodriguez
                                     </a>
                                 </li>
                             </ul>

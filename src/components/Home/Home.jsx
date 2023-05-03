@@ -1,6 +1,8 @@
 // import React from 'react';
 
 import Chefs from "../Chefs/Chefs";
+import LattestRecipe from "../LattestRecipe/LattestRecipe";
+import Testimonial from "../Testimonial/Testimonial";
 
 const Home = () => {
     return (
@@ -17,6 +19,8 @@ const Home = () => {
                 </div>
             </div>
             <Chefs />
+            <LattestRecipe />
+            <Testimonial />
         </div>
     );
 };

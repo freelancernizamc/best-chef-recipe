@@ -9,7 +9,7 @@ const Chefs = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/chefs")
+        fetch("https://assignment-10-server-freelancernizamc.vercel.app/chefs")
             .then((res) => res.json())
             .then((data) => setChefs(data))
             .catch((error) => console.error(error));
@@ -34,7 +34,7 @@ const Chefs = () => {
                             <p>Number of Recipes: {chef.num_recipes}</p>
                             <HiOutlineHeart /> {chef.likes}
                             <div className="card-actions justify-center">
-                                <Link to={`/chefs/${chef.id}`} className="text-indigo-500">View Details</Link>
+                                <Link to={`/chefs/${chef.id}`} className="text-indigo-500 btn btn-warning hover:btn-success">View Details</Link>
 
                             </div>
                         </div>
