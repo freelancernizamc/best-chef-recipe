@@ -3,11 +3,19 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import app from '../../../src/firebase/firebase.config';
 import { createContext, useEffect } from 'react';
 import { useState } from 'react';
+// import { ReactNode } from 'react';
 
-export const AuthContext = createContext(null);
+
+export const AuthContext = createContext({ user: null, loading: true });
+
 
 const auth = getAuth(app);
+
+
 const AuthProvider = () => {
+
+
+
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 

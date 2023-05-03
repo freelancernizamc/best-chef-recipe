@@ -10,29 +10,39 @@ import Main from './layouts/Main'
 import Blog from './components/Blog/Blog'
 import Login from './components/Login/Login/Login'
 import Register from './components/Login/Register/Register'
+import Home from './components/Home/Home';
+
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Main />
+    element: <Main />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: `/chefs/:id`,
+        element: <ChefDetails />
+      },
+      {
+        path: '/blog',
+        element: <Blog />
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/register',
+        element: <Register />
+      }
+
+    ]
   },
-  {
-    path: `/chefs/:id`,
-    element: <ChefDetails />
-  },
-  {
-    path: '/blog',
-    element: <Blog />
-  },
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/register',
-    element: <Register />
-  }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

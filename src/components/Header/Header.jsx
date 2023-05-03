@@ -1,5 +1,22 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../public/images/logo.png'
+// import { getAuth, signOut } from 'firebase/auth';
+// import app from '../../firebase/firebase.config';
+// import { useState } from 'react';
+
+
+// const handleSignOut = () => {
+//     const auth = getAuth(app);
+//     const { user, setUser } = useState(user);
+//     signOut(auth)
+//         .then(result => {
+//             console.log(result)
+//             setUser(null);
+//         })
+//         .catch(error => {
+//             console.log(error)
+//         })
+// }
 
 const Header = () => {
     return (
@@ -20,7 +37,9 @@ const Header = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0}>
                             <div className="md:navbar-end">
+
                                 <button className='btn btn-warning'><Link to='/login'>Login</Link></button>
+
                             </div>
                         </label>
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Header from "../Header/Header";
 import { useParams } from "react-router-dom";
-import Footer from "../Footer/Footer";
+
 
 const ChefDetails = () => {
     const { id } = useParams();
@@ -22,7 +21,7 @@ const ChefDetails = () => {
 
     return (
         <div>
-            <Header />
+
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={chef.view_image} className="max-w-sm rounded-lg shadow-2xl" />
@@ -48,7 +47,6 @@ const ChefDetails = () => {
                     </div>
                 ))}
             </div>
-            <Footer />
 
         </div>
     );

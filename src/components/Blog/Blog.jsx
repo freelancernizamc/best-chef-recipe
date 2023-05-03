@@ -1,13 +1,13 @@
 // import React from 'react';
 
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+
+
 
 const Blog = () => {
     return (
 
         <div>
-            <Header></Header>
+
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 lg:py-20 bg-black text-white">
                 <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                     <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
@@ -86,7 +86,7 @@ const Blog = () => {
 
                     You would create a custom hook when you have some functionality that is used in multiple components, but that functionality does not fit well into the lifecycle methods of a class component or a useEffect hook of a functional component. Custom hooks allow you to create reusable functionality that can be shared across multiple components, improving code reusability and maintainability.</p>
             </div>
-            <Footer />
+
 
         </div>
     );

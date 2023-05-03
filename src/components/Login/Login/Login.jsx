@@ -3,19 +3,36 @@
 import { Link } from "react-router-dom";
 import Header from "../../Header/Header";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
+import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
 import app from "../../../firebase/firebase.config";
+import { useState } from "react";
 
 
 const Login = () => {
+    const [user, setUser] = useState(null);
     const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, provider)
+        signInWithPopup(auth, googleProvider)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                setUser(loggedInUser);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        signInWithPopup(auth, githubProvider)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setUser(loggedUser);
+
             })
             .catch(error => {
                 console.log('error', error.message)
@@ -24,7 +41,7 @@ const Login = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <Header></Header>
+
 
             <h1 className="text-5xl font-bold text-center mt-10">Please Login!</h1>
 
@@ -54,7 +71,7 @@ const Login = () => {
                     </div>
                     <h2 className="text-center">OR</h2>
                     <hr />
-                    <div className="flex ml-5 text-2xl cursor-pointer">   <FaGoogle onClick={handleGoogleSignIn} /> &emsp; <FaGithub /></div>
+                    <div className="flex ml-5 text-2xl cursor-pointer">   <FaGoogle onClick={handleGoogleSignIn} /> &emsp; <FaGithub onClick={handleGithubSignIn} /></div>
                 </div>
                 </div>
             </div>
