@@ -2,8 +2,8 @@
 
 
 
-
 const Blog = () => {
+
     return (
 
         <div>

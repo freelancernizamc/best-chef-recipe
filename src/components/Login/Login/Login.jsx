@@ -30,7 +30,8 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
-                navigate(form, { replace: true })
+                navigate("/", { replace: true })
+
             })
             .catch(error => {
                 console.log(error);
@@ -44,9 +45,10 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
-                const loggedInUser = result.user;
-                console.log(loggedInUser);
-                setUser(loggedInUser);
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setUser(loggedUser);
+                navigate("/", { replace: true })
             })
             .catch(error => {
                 console.log('error', error.message)
@@ -59,6 +61,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 setUser(loggedUser);
+                navigate("/", { replace: true })
 
             })
             .catch(error => {
@@ -68,7 +71,7 @@ const Login = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            {user ? <img src={user.image} /> : ""
+            {user && <img src={user.image} />
 
             }
 
